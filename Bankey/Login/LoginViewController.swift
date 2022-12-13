@@ -32,19 +32,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style() {
-        loginView.translatesAutoresizingMaskIntoConstraints = false
-        
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.configuration = .filled()
-        signInButton.configuration?.imagePadding = 8 // for indicator spacing
-        signInButton.setTitle("Sign In", for: [])
-        signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
-        
-        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        errorMessageLabel.textAlignment = .center
-        errorMessageLabel.textColor = .systemRed
-        errorMessageLabel.numberOfLines = 0
-        errorMessageLabel.isHidden = true
+        view.backgroundColor = .systemBackground
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
@@ -58,6 +46,20 @@ extension LoginViewController {
         subtitleLabel.adjustsFontForContentSizeCategory = true
         subtitleLabel.numberOfLines = 0
         subtitleLabel.text = "Your premium source for all things banking!"
+        
+        loginView.translatesAutoresizingMaskIntoConstraints = false
+        
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        signInButton.configuration = .filled()
+        signInButton.configuration?.imagePadding = 8 // for indicator spacing
+        signInButton.setTitle("Sign In", for: [])
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
+        
+        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
+        errorMessageLabel.textAlignment = .center
+        errorMessageLabel.textColor = .systemRed
+        errorMessageLabel.numberOfLines = 0
+        errorMessageLabel.isHidden = true
     }
     
     private func layout() {
@@ -66,6 +68,19 @@ extension LoginViewController {
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
+        
+        // Title
+        NSLayoutConstraint.activate([
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        // Subtitle
+        NSLayoutConstraint.activate([
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
+            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+        ])
             
         // LoginView
         NSLayoutConstraint.activate([
@@ -86,19 +101,6 @@ extension LoginViewController {
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
             errorMessageLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             errorMessageLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
-        ])
-        
-        // Title
-        NSLayoutConstraint.activate([
-            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-        // Subtitle
-        NSLayoutConstraint.activate([
-            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
-            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
-            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
     }
 }
@@ -122,6 +124,7 @@ extension LoginViewController {
         }
         
         if username == "Kevin" && password == "Welcome" {
+            print("Welcome!")
             signInButton.configuration?.showsActivityIndicator = true
         } else {
             configureView(withMessage: "Incorrect username / password")
@@ -132,5 +135,4 @@ extension LoginViewController {
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
     }
-        
 }
