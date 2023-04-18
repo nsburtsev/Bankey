@@ -23,8 +23,19 @@
 		13B859B729463191005B26BE /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B859B629463191005B26BE /* OnboardingContainerViewController.swift */; };
 		13CB9CDC29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB9CDB29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift */; };
 		13CB9CDE29B9D5D000B82DBB /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CB9CDD29B9D5D000B82DBB /* AccountSummaryHeaderView.xib */; };
+		13E575AC29EE740C0012E539 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */; };
 		13EF331429AF79C2002EEDA1 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF331329AF79C2002EEDA1 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13E575A629EE72030012E539 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 136F8D6528CE287C0055DF02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 136F8D6C28CE287C0055DF02;
+			remoteInfo = Bankey;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13003B8B29C32BCB007BD68C /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -45,11 +56,20 @@
 		13B859B629463191005B26BE /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		13CB9CDB29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcoountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		13CB9CDD29B9D5D000B82DBB /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		13E575A229EE72030012E539 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		13EF331329AF79C2002EEDA1 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		136F8D6A28CE287C0055DF02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13E5759F29EE72030012E539 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -110,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				136F8D6F28CE287C0055DF02 /* Bankey */,
+				13E575A329EE72030012E539 /* BankeyUnitTests */,
 				136F8D6E28CE287C0055DF02 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				136F8D6D28CE287C0055DF02 /* Bankey.app */,
+				13E575A229EE72030012E539 /* BankeyUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +178,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		13E575A329EE72030012E539 /* BankeyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */,
+			);
+			path = BankeyUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +206,24 @@
 			productReference = 136F8D6D28CE287C0055DF02 /* Bankey.app */;
 			productType = "com.apple.product-type.application";
 		};
+		13E575A129EE72030012E539 /* BankeyUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13E575AA29EE72030012E539 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */;
+			buildPhases = (
+				13E5759E29EE72030012E539 /* Sources */,
+				13E5759F29EE72030012E539 /* Frameworks */,
+				13E575A029EE72030012E539 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13E575A729EE72030012E539 /* PBXTargetDependency */,
+			);
+			name = BankeyUnitTests;
+			productName = BankeyUnitTests;
+			productReference = 13E575A229EE72030012E539 /* BankeyUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -183,11 +231,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					136F8D6C28CE287C0055DF02 = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					13E575A129EE72030012E539 = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
+						TestTargetID = 136F8D6C28CE287C0055DF02;
 					};
 				};
 			};
@@ -205,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				136F8D6C28CE287C0055DF02 /* Bankey */,
+				13E575A129EE72030012E539 /* BankeyUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +271,13 @@
 				13CB9CDE29B9D5D000B82DBB /* AccountSummaryHeaderView.xib in Resources */,
 				136F8D7D28CE287F0055DF02 /* LaunchScreen.storyboard in Resources */,
 				136F8D7A28CE287F0055DF02 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13E575A029EE72030012E539 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13E5759E29EE72030012E539 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E575AC29EE740C0012E539 /* CurrencyFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13E575A729EE72030012E539 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 136F8D6C28CE287C0055DF02 /* Bankey */;
+			targetProxy = 13E575A629EE72030012E539 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		136F8D7B28CE287F0055DF02 /* LaunchScreen.storyboard */ = {
@@ -426,6 +503,59 @@
 			};
 			name = Release;
 		};
+		13E575A829EE72030012E539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B59JHR63KH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ns.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Debug;
+		};
+		13E575A929EE72030012E539 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B59JHR63KH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ns.BankeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bankey";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +573,15 @@
 			buildConfigurations = (
 				136F8D8228CE287F0055DF02 /* Debug */,
 				136F8D8328CE287F0055DF02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13E575AA29EE72030012E539 /* Build configuration list for PBXNativeTarget "BankeyUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13E575A829EE72030012E539 /* Debug */,
+				13E575A929EE72030012E539 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
