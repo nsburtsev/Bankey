@@ -25,6 +25,8 @@
 		13B859B729463191005B26BE /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B859B629463191005B26BE /* OnboardingContainerViewController.swift */; };
 		13CB9CDC29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CB9CDB29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift */; };
 		13CB9CDE29B9D5D000B82DBB /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CB9CDD29B9D5D000B82DBB /* AccountSummaryHeaderView.xib */; };
+		13D7CEA92A4CB2AF00FAEF93 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D7CEA82A4CB2AF00FAEF93 /* ProfileTests.swift */; };
+		13D7CEAB2A4CB37200FAEF93 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D7CEAA2A4CB37200FAEF93 /* AccountTests.swift */; };
 		13DB5A032A04EBBF00E14EE8 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DB5A022A04EBBF00E14EE8 /* AccountSummaryViewController+Networking.swift */; };
 		13DEA20C29F16B4A005C5D4E /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEA20B29F16B4A005C5D4E /* NSNotificationName.swift */; };
 		13DEA20E29F16EB4005C5D4E /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEA20D29F16EB4005C5D4E /* UITextField+SecureToggle.swift */; };
@@ -63,6 +65,8 @@
 		13B859B629463191005B26BE /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		13CB9CDB29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcoountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		13CB9CDD29B9D5D000B82DBB /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		13D7CEA82A4CB2AF00FAEF93 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		13D7CEAA2A4CB37200FAEF93 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		13DB5A022A04EBBF00E14EE8 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		13DEA20B29F16B4A005C5D4E /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		13DEA20D29F16EB4005C5D4E /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
@@ -201,10 +205,28 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		13E575A329EE72030012E539 /* BankeyUnitTests */ = {
+		13D7CEA62A4CB27900FAEF93 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		13D7CEA72A4CB28800FAEF93 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				13D7CEA82A4CB2AF00FAEF93 /* ProfileTests.swift */,
+				13D7CEAA2A4CB37200FAEF93 /* AccountTests.swift */,
+			);
+			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		13E575A329EE72030012E539 /* BankeyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				13D7CEA72A4CB28800FAEF93 /* AccountSummary */,
+				13D7CEA62A4CB27900FAEF93 /* Utils */,
 			);
 			path = BankeyUnitTests;
 			sourceTree = "<group>";
@@ -338,6 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E575AC29EE740C0012E539 /* CurrencyFormatterTests.swift in Sources */,
+				13D7CEAB2A4CB37200FAEF93 /* AccountTests.swift in Sources */,
+				13D7CEA92A4CB2AF00FAEF93 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
