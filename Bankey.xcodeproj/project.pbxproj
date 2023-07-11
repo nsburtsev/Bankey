@@ -13,6 +13,7 @@
 		13267F9B29B7B2000043DCB9 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13267F9A29B7B2000043DCB9 /* AccountSummaryViewController.swift */; };
 		135D3CB82A541217006783FA /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D3CB72A541217006783FA /* SkeletonCell.swift */; };
 		13677DBA29F90C6300F561E7 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13677DB929F90C6300F561E7 /* ShakeyBellView.swift */; };
+		1369A4B92A5842CE00B25418 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1369A4B82A5842CE00B25418 /* ProfileManager.swift */; };
 		136F8D7128CE287C0055DF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136F8D7028CE287C0055DF02 /* AppDelegate.swift */; };
 		136F8D7528CE287C0055DF02 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136F8D7428CE287C0055DF02 /* LoginViewController.swift */; };
 		136F8D7A28CE287F0055DF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 136F8D7928CE287F0055DF02 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		13DEA20C29F16B4A005C5D4E /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEA20B29F16B4A005C5D4E /* NSNotificationName.swift */; };
 		13DEA20E29F16EB4005C5D4E /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DEA20D29F16EB4005C5D4E /* UITextField+SecureToggle.swift */; };
 		13E575AC29EE740C0012E539 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */; };
+		13E895D82A5D8AA000667ED2 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E895D72A5D8AA000667ED2 /* AccountSummaryViewControllerTests.swift */; };
 		13EF331429AF79C2002EEDA1 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF331329AF79C2002EEDA1 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,7 @@
 		13267F9A29B7B2000043DCB9 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		135D3CB72A541217006783FA /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		13677DB929F90C6300F561E7 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		1369A4B82A5842CE00B25418 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		136F8D6D28CE287C0055DF02 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		136F8D7028CE287C0055DF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		136F8D7428CE287C0055DF02 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		13DEA20D29F16EB4005C5D4E /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		13E575A229EE72030012E539 /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E575AB29EE740C0012E539 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
+		13E895D72A5D8AA000667ED2 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 		13EF331329AF79C2002EEDA1 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 				13DB5A022A04EBBF00E14EE8 /* AccountSummaryViewController+Networking.swift */,
 				13003B8929C32B82007BD68C /* Header */,
 				13003B8A29C32B9A007BD68C /* Cells */,
+				1369A4B72A58428800B25418 /* Networking */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -153,6 +158,14 @@
 				13677DB929F90C6300F561E7 /* ShakeyBellView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		1369A4B72A58428800B25418 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1369A4B82A5842CE00B25418 /* ProfileManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		136F8D6428CE287C0055DF02 = {
@@ -224,6 +237,7 @@
 			children = (
 				13D7CEA82A4CB2AF00FAEF93 /* ProfileTests.swift */,
 				13D7CEAA2A4CB37200FAEF93 /* AccountTests.swift */,
+				13E895D72A5D8AA000667ED2 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				13AA0C5E29B3B89B00D56FB0 /* UIViewController+Utils.swift in Sources */,
 				135D3CB82A541217006783FA /* SkeletonCell.swift in Sources */,
 				1303CB0D2A019DEE000CF717 /* Date+Utils.swift in Sources */,
+				1369A4B92A5842CE00B25418 /* ProfileManager.swift in Sources */,
 				1307A05928D3583500AB1E0A /* LoginView.swift in Sources */,
 				13AA0C5C29B2150800D56FB0 /* LocalState.swift in Sources */,
 				13CB9CDC29B9D4F000B82DBB /* AcoountSummaryHeaderView.swift in Sources */,
@@ -370,6 +385,7 @@
 				13E575AC29EE740C0012E539 /* CurrencyFormatterTests.swift in Sources */,
 				13D7CEAB2A4CB37200FAEF93 /* AccountTests.swift in Sources */,
 				13D7CEA92A4CB2AF00FAEF93 /* ProfileTests.swift in Sources */,
+				13E895D82A5D8AA000667ED2 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
