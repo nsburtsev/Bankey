@@ -26,7 +26,9 @@ class ProfileTests: XCTestCase {
         """
         
         let data = json.data(using: .utf8)!
-        let result = try! JSONDecoder().decode(Profile.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let result = try! decoder.decode(Profile.self, from: data)
         
         XCTAssertEqual(result.id, "1")
         XCTAssertEqual(result.firstName, "Kevin")

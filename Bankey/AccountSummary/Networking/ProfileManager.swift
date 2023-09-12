@@ -21,11 +21,6 @@ struct Profile: Codable {
     let firstName: String
     let lastName: String
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-    }
 }
 
 class ProfileManager: ProfileManageable {
@@ -40,7 +35,9 @@ class ProfileManager: ProfileManageable {
                 }
 
                 do {
-                    let profile = try JSONDecoder().decode(Profile.self, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let profile = try decoder.decode(Profile.self, from: data)
                     completion(.success(profile))
                 } catch {
                     completion(.failure(.decodingError))
